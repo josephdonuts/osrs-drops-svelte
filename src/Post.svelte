@@ -1,48 +1,44 @@
 <script>
   export let title;
   export let date;
-  export let src;
+  export let image;
 </script>
 
-<article class="post">
   <div class="post-title-date">
-    <h1 class="post-title">
+    <p class="post-title">
         {title}
-    </h1>
+    </p>
     <p class="date">
       {date}
     </p>
   </div>
-  <img class="img" {src} alt="">
-</article>
+  <img class="img" src={image} alt="">
 
 <style>
-.post {
-  display: flex;
-  border: 1px solid black;
-  background-color: rgb(196, 173, 142);
-  border-radius: 10px;
-  margin: 15px;
-  padding: 15px;
-  width: fit-content;
-}
 .post-title-date {
+  color: white;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.5em;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .post-title {
   flex: 1;
+  text-align: right;
+  padding-right: 50px;
+  font-weight: bold;
 }
 .date {
   flex: 1;
-  text-align: right;
+  text-align: left;
+  padding-left: 50px;
 }
 .img {
-    display: flex;
-    align-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: fill;
-    border-radius: 10px;
+  flex: 1;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
 }
 </style>
