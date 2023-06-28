@@ -12,7 +12,9 @@
       {date}
     </p>
   </div>
-  <img class="img" src={image} alt="">
+  <div class="img-container">
+    <img class="img" src={image} alt="">
+  </div>
 
 <style>
 .post-title-date {
@@ -33,12 +35,14 @@
   text-align: left;
   padding-left: 50px;
 }
-.img {
-  flex: 1;
-  object-fit: contain;
-  border-radius: 10px;
-  border: 1px solid black;
+.img-container {
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+.img {
+  object-fit: scale-down;
+  border-radius: 10px;
+  padding-bottom: 50px;
 }
 </style>
